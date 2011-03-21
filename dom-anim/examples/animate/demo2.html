@@ -1,1 +1,180 @@
-<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <script type="text/javascript">self.moveTo(0,0) self.resizeTo(screen.availWidth,screen.availHeight) onresize = function () {return false;}</script><title>Super Animate</title><meta name="Author" content="hongru.chen" /><script type="text/javascript" src="animate.js"></script><style type="text/css">html, body {overflow:hidden}body, h1, h2, h3, h4, h5, h6, p, ul, dl, ol {margin:0; padding:0}li {list-style:none}body {height:100%; color: #fff; font: 14px/1.5 'ChunkFive Regular', Arial, Helvetica, sans-serif;}.mask {position: absolute; background:#000; width: 100%; height:100%; left:0; top: 0; z-index:999}#start {position: absolute; color:#000; font-size:50px; top: 45%; opacity:0; filter:alpha(opacity=0)}.bg {position:absolute; background:url(http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-1.jpg) 50% 50%; left:0; height:100%; width: 100%}#menu dl {padding: 14px 8px 2px 8px}#menu {position: absolute; background: #000; font-size: 30px; left: 100px;top:120px; overflow:hidden;height:0; width:176px; z-index:1000}#menu dd {font-weight: bold; cursor:pointer; height: 44px;overflow:hidden; position:relative}#menu dd ul {position: absolute;left:0;top:0}.color-1 {color:#d61565}.color-2 {color:#555;}.info {position: absolute; width: 300px; left:300px; top: 120px;padding:14px 10px;background: #000;overflow:hidden;width:0;height:30px;display:none;z-index:1000}.fs-12 {font-size:12px}#waiting {left: 46%; top:46%;font-size:40px; color:#999;position:absolute}</style></head><body><div id="menu"><dl><dt><em>岑安 --</em></dt><dd><ul id="menu0"><li>home</li><li class="color-1">home</li></ul></dd><dd><ul id="menu1"><li>info</li><li class="color-1">info</li></ul></dd><dd><ul id="menu2"><li>gallery</li><li class="color-1">gallery</li></ul></dd><dd><ul id="menu3"><li>blog</li><li class="color-1">blog</li></ul></dd><dd><ul id="menu4"><li>contact</li><li class="color-1">contact</li></ul></dd></dl></div><div id="info0" class="info"><p class="color-2"><em>This is Hongru's space <span class="color-1">-- home</span><br/>@me: hongru.chenhr@gmail.com</em></p><strong class="color-1">Welcome !</strong><br/><p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div id="info1" class="info"><p class="color-2"><em>This is Hongru's space <span class="color-1">-- info</span><br/>@me: hongru.chenhr@gmail.com</em></p><strong class="color-1">Welcome !</strong><br/><p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div id="info2" class="info"><p class="color-2"><em>This is Hongru's space <span class="color-1">-- gallery</span><br/>@me: hongru.chenhr@gmail.com</em></p><strong class="color-1">Welcome !</strong><br/><p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div id="info3" class="info"><p class="color-2"><em>This is Hongru's space <span class="color-1">-- blog</span><br/>@me: hongru.chenhr@gmail.com</em></p><strong class="color-1">Welcome !</strong><br/><p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div id="info4" class="info"><p class="color-2"><em>This is Hongru's space <span class="color-1">-- contact</span><br/>@me: hongru.chenhr@gmail.com</em></p><strong class="color-1">Welcome !</strong><br/><p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div><div id="bg" class="bg"></div><div id="mask" class="mask"><strong id="waiting">Waiting...</strong></div><em id="start">Start!</em><script type="text/javascript">onload = function () {    HR.extend(HR, {     addEvent: function (o, e, f) {      o.addEventListener ? o.addEventListener(e, f, false) : o.attachEvent('on'+e, function(){f.call(o)})     },     $ : function (id) {return document.getElementById(id)},     $$ : function (c, p) {return p.getElementsByTagName(c)},     superAnim: {},     loadImg: function (urls, cb) {      var n = urls.length, img = [], f = 0;      for (var i=0; i<n; i++) {       img[i] = new Image();       img[i].src = urls[i];       if (img[i].complete) {        if (++f == n) {cb && cb(); return} else {f++}       }       img[i].onload = function () {        if (++f == n) {cb && cb()} else {f++}       }      }     }    })    HR.superAnim.init = function () {     var a = HR.$('mask').offsetWidth,       b = HR.$('mask').offsetHeight,      dlwp = HR.$('menu'),      dd = HR.$$('dd', dlwp),      flag = null,      clickable = true,      at;     HR.get('bg').setStyle('top', -b+'px');     HR.loadImg(['http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-1.jpg',        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-2.jpg',        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-3.jpg',        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-4.jpg',        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-5.jpg'],         function () {         HR.get('mask').animate({left: -a}, 3000, function () {          HR.$('waiting').style.display = 'none';          HR.get('start').animate({opacity:1, left:a/2.2},'Elastic').animate({opacity:0,left:a},'Elastic','easeIn', function(){           HR.get('bg').animate({top:0},'Bounce',2000, function(){            HR.get('menu').animate({height: 286},'Back', function () {             setTimeout(function(){bgAnim(2)}, 2000);            })           })          })         });        });     for (var i=0; i<dd.length; i++) {      HR.addEvent(dd[i], 'mouseover', function (i) {       return function () {        HR.get('menu'+i).stop().animate({top: -48},'Back',500)       }      }(i));      HR.addEvent(dd[i], 'mouseout', function (i) {       return function () {        HR.get('menu'+i).stop().animate({top: 0},'Back',500)       }      }(i));      HR.addEvent(dd[i], 'click', function (i) {       return function () {         if (clickable) {         clickable = false;//console.log('yes')         if (flag == null) {          HR.get('info'+i).show().animate({width:300},'Back').animate({height:360},'Elastic',function(){clickable = true;flag = i;})         } else if (flag != i) {          HR.get('info'+flag).animate({height:30}).animate({width:0},function(){           this.style.display = 'none'           HR.get('info'+i).show().animate({width:300},'Back').animate({height:360},'Elastic',function(){clickable = true;flag = i;});           });	         } else return;        }        }      }(i));     }     function bgAnim (i) {      clearTimeout(at);      HR.get('mask').animate({left: 0}, function () {       HR.$('bg').style.backgroundImage = 'url(http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-'+i+'.jpg)';      }).animate({left: -a});      var n = i+1 == 6 ? 1 : i+1;      at = setTimeout(function(){bgAnim(n)}, 6000);     }    }();}</script></body></html>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript">
+self.moveTo(0,0) 
+self.resizeTo(screen.availWidth,screen.availHeight) 
+onresize = function () {return false;}
+</script><title>Super Animate</title>
+<meta name="Author" content="hongru.chen" />
+<script type="text/javascript" src="animate.js"></script><style type="text/css">
+html, body {overflow:hidden}
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, ol {margin:0; padding:0}
+li {list-style:none}
+body {height:100%; color: #fff; font: 14px/1.5 'ChunkFive Regular', Arial, Helvetica, sans-serif;}
+.mask {position: absolute; background:#000; width: 100%; height:100%; left:0; top: 0; z-index:999}
+#start {position: absolute; color:#000; font-size:50px; top: 45%; opacity:0; filter:alpha(opacity=0)}
+.bg {position:absolute; background:url(http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-1.jpg) 50% 50%; left:0; height:100%; width: 100%}
+#menu dl {padding: 14px 8px 2px 8px}
+#menu {position: absolute; background: #000; font-size: 30px; left: 100px;top:120px; overflow:hidden;height:0; width:176px; z-index:1000}
+#menu dd {font-weight: bold; cursor:pointer; height: 44px;overflow:hidden; position:relative}
+#menu dd ul {position: absolute;left:0;top:0}
+.color-1 {color:#d61565}
+.color-2 {color:#555;}
+.info {position: absolute; width: 300px; left:300px; top: 120px;padding:14px 10px;background: #000;overflow:hidden;width:0;height:30px;display:none;z-index:1000}
+.fs-12 {font-size:12px}
+#waiting {left: 46%; top:46%;font-size:40px; color:#999;position:absolute}
+</style>
+</head>
+<body>
+<div id="menu">
+<dl>
+<dt><em>岑安 --</em></dt>
+<dd><ul id="menu0">
+<li>home</li>
+<li class="color-1">home</li>
+</ul></dd>
+<dd>
+<ul id="menu1">
+<li>info</li>
+<li class="color-1">info</li>
+</ul>
+</dd>
+<dd>
+<ul id="menu2">
+<li>gallery</li>
+<li class="color-1">gallery</li>
+</ul>
+</dd>
+<dd>
+<ul id="menu3">
+<li>blog</li>
+<li class="color-1">blog</li>
+</ul>
+</dd>
+<dd>
+<ul id="menu4">
+<li>contact</li>
+<li class="color-1">contact</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div id="info0" class="info">
+<p class="color-2"><em>This is Hongru's space <span class="color-1">-- home</span><br/>@me: hongru.chenhr@gmail.com</em></p>
+<strong class="color-1">Welcome !</strong><br/>
+<p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="info1" class="info">
+<p class="color-2"><em>This is Hongru's space <span class="color-1">-- info</span><br/>@me: hongru.chenhr@gmail.com</em></p>
+<strong class="color-1">Welcome !</strong><br/>
+<p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="info2" class="info">
+<p class="color-2"><em>This is Hongru's space <span class="color-1">-- gallery</span><br/>@me: hongru.chenhr@gmail.com</em></p>
+<strong class="color-1">Welcome !</strong><br/>
+<p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="info3" class="info">
+<p class="color-2"><em>This is Hongru's space <span class="color-1">-- blog</span><br/>@me: hongru.chenhr@gmail.com</em></p>
+<strong class="color-1">Welcome !</strong><br/>
+<p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="info4" class="info">
+<p class="color-2"><em>This is Hongru's space <span class="color-1">-- contact</span><br/>@me: hongru.chenhr@gmail.com</em></p>
+<strong class="color-1">Welcome !</strong><br/>
+<p class="fs-12">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor rupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<div id="bg" class="bg">
+</div>
+<div id="mask" class="mask"><strong id="waiting">Waiting...</strong></div>
+<em id="start">Start!</em>
+<script type="text/javascript">
+onload = function () {
+    HR.extend(HR, {
+     addEvent: function (o, e, f) {
+      o.addEventListener ? o.addEventListener(e, f, false) : o.attachEvent('on'+e, function(){f.call(o)})
+     },
+     $ : function (id) {return document.getElementById(id)},
+     $$ : function (c, p) {return p.getElementsByTagName(c)},
+     superAnim: {},
+     loadImg: function (urls, cb) {
+      var n = urls.length, img = [], f = 0;
+      for (var i=0; i<n; i++) {
+       img[i] = new Image();
+       img[i].src = urls[i];
+       if (img[i].complete) {
+        if (++f == n) {cb && cb(); return} else {f++}
+       }
+       img[i].onload = function () {
+        if (++f == n) {cb && cb()} else {f++}
+       }
+      }
+     }
+    })
+    HR.superAnim.init = function () {
+     var a = HR.$('mask').offsetWidth, 
+      b = HR.$('mask').offsetHeight,
+      dlwp = HR.$('menu'),
+      dd = HR.$$('dd', dlwp),
+      flag = null,
+      clickable = true,
+      at;
+     HR.get('bg').setStyle('top', -b+'px');
+     HR.loadImg(['http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-1.jpg',
+        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-2.jpg',
+        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-3.jpg',
+        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-4.jpg',
+        'http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-5.jpg'], 
+        function () {
+         HR.get('mask').animate({left: -a}, 3000, function () {
+          HR.$('waiting').style.display = 'none';
+          HR.get('start').animate({opacity:1, left:a/2.2},'Elastic').animate({opacity:0,left:a},'Elastic','easeIn', function(){
+           HR.get('bg').animate({top:0},'Bounce',2000, function(){
+            HR.get('menu').animate({height: 286},'Back', function () {
+             setTimeout(function(){bgAnim(2)}, 2000);
+            })
+           })
+          })
+         });
+        });
+     for (var i=0; i<dd.length; i++) {
+      HR.addEvent(dd[i], 'mouseover', function (i) {
+       return function () {
+        HR.get('menu'+i).stop().animate({top: -48},'Back',500)
+       }
+      }(i));
+      HR.addEvent(dd[i], 'mouseout', function (i) {
+       return function () {
+        HR.get('menu'+i).stop().animate({top: 0},'Back',500)
+       }
+      }(i));
+      HR.addEvent(dd[i], 'click', function (i) {
+       return function () { 
+        if (clickable) {
+         clickable = false;//console.log('yes')
+         if (flag == null) {
+          HR.get('info'+i).show().animate({width:300},'Back').animate({height:360},'Elastic',function(){clickable = true;flag = i;})
+         } else if (flag != i) {
+          HR.get('info'+flag).animate({height:30}).animate({width:0},function(){
+           this.style.display = 'none'
+           HR.get('info'+i).show().animate({width:300},'Back').animate({height:360},'Elastic',function(){clickable = true;flag = i;}); 
+          });	
+         } else return;
+        } 
+       }
+      }(i));
+     }
+     function bgAnim (i) {
+      clearTimeout(at);
+      HR.get('mask').animate({left: 0}, function () {
+       HR.$('bg').style.backgroundImage = 'url(http://images.cnblogs.com/cnblogs_com/hongru/280894/o_bg-'+i+'.jpg)';
+      }).animate({left: -a});
+      var n = i+1 == 6 ? 1 : i+1;
+      at = setTimeout(function(){bgAnim(n)}, 6000);
+     }
+    }();
+}
+</script></body>
+</html>
